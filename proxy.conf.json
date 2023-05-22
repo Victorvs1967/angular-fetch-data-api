@@ -1,0 +1,10 @@
+{
+  "/patents": {
+    "target": "https://data.nasa.gov/resource",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/patents": ""
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="image">
+      <img src="assets/img/NASAmeatball1200.jpg" alt="Nasa logo" class="mt-2 text-center">
+      <h1 class="mb-0 text-center">Official patents</h1>
+    </div>
+  </div>
+  <table class="table table-hover mt-2">
+    <thead>
+      <tr>
+        <th scope="col">Center</th>
+        <th scope="col">Satus</th>
+        <th scope="col">Title</th>
+        <th scope="col" class="text-center">Expiration date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patent of patents$ | async">
+        <th class="td-center">{{ patent.center }}</th>
+        <td class="td-status">{{ patent.status }}</td>
+        <td class="td-title">{{ patent.title }}</td>
+        <td class="td-expiration-date text-center">
+          {{
+            patent.patentExpirationDate ? (patent.patentExpirationDate | date) : '-'
+          }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
